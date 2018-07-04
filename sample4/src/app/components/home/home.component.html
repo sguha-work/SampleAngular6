@@ -1,0 +1,10 @@
+<h1> Enter the city name to display weather </h1>
+<div>
+  <p>Enter the city name in the input box</p>
+  <input type="text" name="cityName" [(ngModel)]="model.cityName">
+</div>
+<br>
+<div>
+  <button (click)="callApi()">click me to display weather</button>
+</div>
+

@@ -4,13 +4,17 @@ Angular 6 sample projects
     # Usefull commands for angular
 
     ## updating/installing angular
-    npm install @angular/cli@latest -g
+    >> npm install @angular/cli@latest -g
+   
     ## generating component
-    npm g c components/<component name>
+    >> npm g c components/<component name>
+    
     ## generating service
-    npm g s services/<service name>
+    >> npm g s services/<service name>
+    
     ## display preview on browser
-    ng serve -o // omit '-o' will not open the link with your default browser
+    >> ng serve -o // omit '-o' will not open the link with your default browser
+    
     ## building output
     ng build --prod // --dev will prepare a dev build with uncompressed JS files
 

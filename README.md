@@ -1,9 +1,15 @@
 Angular 6 sample projects
 ========
-    ##sample 1
+
+    # Usefull commands for angular
+
+    ## updating/installing angular
+    `npm install @angular/cli@latest -g`
+
+    ## sample 1
     
-    ##sample 2 - using basic service and basic templating
+    ## sample 2 - using basic service and basic templating
     
-    ##sample 3 - using jquery, bootstrap
+    ## sample 3 - using jquery, bootstrap
     
-    ##sample 4 - REST API
+    ## sample 4 - REST API

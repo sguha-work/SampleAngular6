@@ -8,3 +8,60 @@
   <button (click)="callApi()">click me to display weather</button>
 </div>
 
+<div *ngIf="model.cityWeatherData">
+  <p> The weather of the {{model.cityName}} is following</p>
+  <table>
+    <tr>
+      <th>
+        Date
+      </th>
+      <th>
+        Temparature(in Celcius)
+      </th>
+      <th>
+        Air pressure
+      </th>
+      <th>
+        Humidity
+      </th>
+      <th>
+        Speed
+      </th>
+      <th>
+        Clouds
+      </th>
+      <th>
+        Rain
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+    <tr *ngFor="let weather of model.cityWeatherData.list">
+      <td>
+        {{convertTimeStampToDate(weather.dt)}}
+      </td>
+      <td>
+        {{convertKelvinToCelcius(weather.temp.day)}}
+      </td>
+      <td>
+        {{weather.pressure}}
+      </td>
+      <td>
+          {{weather.humidity}}
+      </td>
+      <td>
+          {{weather.speed}}
+      </td>
+      <td>
+          {{weather.clouds}}
+      </td>
+      <td>
+          {{weather.rain}}
+      </td>
+      <td>
+        {{weather.weather[0].description}}
+      </td>
+    </tr>
+  </table>
+</div>

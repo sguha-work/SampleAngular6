@@ -26,4 +26,5 @@ Angular 6 sample projects
     
     ## sample 4 - REST API
 
-## sample 5 - Inter component communication using common service
+    ## sample 5 - Inter component communication using common service
+    ## sample 7 - component to component communication using event emitter

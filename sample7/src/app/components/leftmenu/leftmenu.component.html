@@ -1,0 +1,6 @@
+<div class="left">
+  <ul>
+    <li style="cursor: pointer" *ngFor="let menu of menuList" (click)="setDataToDisplay(menu.description)">{{menu.name}} &nbsp; ({{menu.price}})</li>
+    
+  </ul>
+</div>

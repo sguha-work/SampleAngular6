@@ -1,0 +1,17 @@
+<form>
+  <p>Enter student name </p>
+  <p>
+    <input type="text" name="name" [(ngModel)]="studentName">
+  </p>
+  <p>Enter student city </p>
+  <p>
+    <input type="text" name="city" [(ngModel)]="studentCity">
+  </p>
+  <p>Enter student phone number </p>
+  <p>
+    <input type="text" name="phoneNumber" [(ngModel)]="studentPhoneNumber">
+  </p>
+  <p>
+    <button (click)="submitForm($event)">click to submit</button>
+  </p>
+</form>

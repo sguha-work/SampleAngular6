@@ -1,0 +1,14 @@
+<table *ngIf="data.studentData.length">
+  <tr *ngFor="let student of data.studentData">
+    <td>
+      {{student.name}}
+    </td>
+    <td>
+      {{student.city}}
+    </td>
+    <td>
+      {{student.phoneNumber}}
+    </td>
+  </tr>
+</table>
+<h2 *ngIf="data.studentData.length==0">No data to display</h2>

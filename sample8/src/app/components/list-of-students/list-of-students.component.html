@@ -1,0 +1,9 @@
+<p>
+  list-of-students works!
+</p>
+<ul>
+  <li *ngFor="let student of students">
+    <a [ngClass]="student.rank=='poor'?'red':'green'" href="/#{{student.name}}" (click)="nameClicked(student, $event)">{{student.name}}</a>
+    
+  </li> 
+</ul>

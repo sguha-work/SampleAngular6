@@ -8,8 +8,8 @@ import {ContactusComponent} from './../components/contactus/contactus.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/about', component: AboutComponent },
-  { path: '/contactus', component: ContactusComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'contactus', component: ContactusComponent }
 ];
 
 @NgModule({

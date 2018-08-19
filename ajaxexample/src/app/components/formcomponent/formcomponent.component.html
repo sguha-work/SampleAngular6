@@ -1,0 +1,14 @@
+<p>
+  Enter the id of the to do
+</p>
+<form>
+  <p>
+    id
+  </p>
+  <div>
+    <input type="text" name="todoid" [(ngModel)]="model.todoid">
+  </div>
+  <div>
+    <button (click)="getToDoInformation()">Click to get the todo</button>
+  </div>
+</form>

@@ -1,0 +1,23 @@
+<table *ngIf="data.tododata.length">
+    <tr>
+        <td>
+            id
+        </td>
+        <td>
+            description
+        </td>
+    </tr>
+    <tr *ngFor="let tododata of data.tododata">
+        <td>
+            {{tododata.id}}
+        </td>
+        <td>
+            {{tododata.title}}
+        </td>
+    </tr>
+</table>
+
+<div *ngIf="!data.tododata.length">
+    <p>id = {{data.tododata.id}}</p>
+    <p>description = {{data.tododata.title}}</p>
+</div>

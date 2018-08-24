@@ -11,8 +11,8 @@ export class FormComponent implements OnInit {
   public form: FormGroup;
   constructor(private fb: FormBuilder) { 
     this.form = fb.group({
-      "firstName": [null, Validators.required],
-      "lastName": [null, Validators.required]
+      "firstName": [null, Validators.compose([Validators.required, Validators.minLength(5)])],
+      "lastName": [null, Validators.compose([Validators.required, Validators.minLength(5)])]
     });
   }
 

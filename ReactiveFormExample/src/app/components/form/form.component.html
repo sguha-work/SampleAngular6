@@ -1,10 +1,15 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
   <div>
     <label>First Name</label>
     <input type="text" formControlName="firstName"/>
+    <p class="alert" *ngIf="!form.controls['firstName'].valid && form.controls['firstName'].touched">Invalid first name</p>
   </div>
+  <br>
   <div>
     <label>Last Name</label>
     <input type="text" formControlName="lastName"/>
+    <p class="alert" *ngIf="!form.controls['lastName'].valid && form.controls['lastName'].touched">Invalid last name</p>
   </div>
+  <br>
+  <button [disabled]="!form.valid">Click me to submit</button>
 </form>

@@ -16,6 +16,10 @@ export class FormComponent implements OnInit {
     });
   }
 
+  public submitForm(value) {
+    console.log(value);
+  }
+
   ngOnInit() {
   }
 

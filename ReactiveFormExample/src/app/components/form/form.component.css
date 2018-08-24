@@ -1,0 +1,12 @@
+button {
+    background-color: aquamarine;
+    color: red;
+}
+button:disabled {
+    background-color: aliceblue;
+    color: gray;
+}
+
+.alert {
+    color: red;
+}

@@ -1,0 +1,15 @@
+
+<form [formGroup]="emailForm">
+  <p>
+    The following form holds a email field and will show alert if only the email is alright
+  </p>
+  <input type="text" formControlName="email">
+  <button>
+    Click me
+  </button>
+  <div class="error" *ngIf="emailForm.controls['email'].touched && !emailForm.controls['email'].valid">
+    <p>Email is requirred</p>
+    <p>Provided email is not valid</p>
+  </div>
+  
+</form>

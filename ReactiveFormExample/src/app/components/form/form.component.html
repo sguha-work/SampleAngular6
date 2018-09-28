@@ -1,25 +1,25 @@
-<form [formGroup]="formx" (ngSubmit)="submitForm(formx.value)">
+<form [formGroup]="fg" (ngSubmit)="submitForm(fg.value)">
   <div>
     <label>First Name</label>
     <input type="text" formControlName="firstName"/>
-    <p class="alert" *ngIf="!formx.controls['firstName'].valid && formx.controls['firstName'].touched">Invalid first name</p>
+    <p class="alert" *ngIf="!fg.controls['firstName'].valid && fg.controls['firstName'].touched">Invalid first name</p>
   </div>
   <br>
   <div>
     <label>Last Name</label>
     <input type="text" formControlName="lastName"/>
-    <p class="alert" *ngIf="!formx.controls['lastName'].valid && formx.controls['lastName'].touched">Invalid last name</p>
+    <p class="alert" *ngIf="!fg.controls['lastName'].valid && fg.controls['lastName'].touched">Invalid last name</p>
   </div>
   <div>
     <label>Phone number</label>
     <input type="text" formControlName="phoneNumber"/>
-    <p class="alert" *ngIf="!formx.controls['phoneNumber'].valid && formx.controls['phoneNumber'].touched">Invalid phone number</p>
+    <p class="alert" *ngIf="!fg.controls['phoneNumber'].valid && fg.controls['phoneNumber'].touched">Invalid phone number</p>
   </div>
   <div>
     <label>Password </label>
-    <input (input)="checkPassword(formx.value.password)" type="password" formControlName="password"/>
-    <p class="alert" *ngIf="!formx.controls['password'].valid && formx.controls['password'].touched">Invalid phone password</p>
+    <input (input)="checkPassword(fg.value.password)" type="password" formControlName="password"/>
+    <p class="alert" *ngIf="!fg.controls['password'].valid && fg.controls['password'].touched">Invalid phone password</p>
   </div>
   <br>
-  <button [disabled]="!formx.valid">Click me to submit</button>
+  <button [disabled]="!fg.valid">Click me to submit</button>
 </form>

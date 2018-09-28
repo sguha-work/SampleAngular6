@@ -1,0 +1,33 @@
+<h3>This is a sample reactive form</h3>
+
+<form [formGroup]="fg" (ngSubmit)="submitForm(fg.value)">
+  <div>
+    <h6>Enter your name here</h6>
+    <div>
+      <input type="text" formControlName="name">
+    </div>
+    <p class="error" *ngIf="!fg.controls['name'].valid && fg.controls['name'].touched">Not a valid name</p>
+  </div>
+  <div>
+    <h6>Enter your email here</h6>
+    <div>
+      <input type="text" formControlName="email">
+    </div>
+    <p class="error" *ngIf="!fg.controls['email'].valid && fg.controls['email'].touched">Not a valid email</p>
+  </div>
+  <div>
+    <h6>Enter your phone number here</h6>
+    <div>
+      <input type="text" formControlName="phoneNumber">
+    </div>
+    <p class="error" *ngIf="!fg.controls['phoneNumber'].valid && fg.controls['phoneNumber'].touched">Not a valid phone
+      number</p>
+  </div>
+  <div>
+    <br>
+    <div>
+      <button [disabled]="!fg.valid">Submit form</button>
+    </div>
+  </div>
+
+</form>

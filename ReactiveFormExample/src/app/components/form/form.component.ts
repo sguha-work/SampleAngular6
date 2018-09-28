@@ -8,9 +8,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  public formx: FormGroup;
+  public fg: FormGroup;
   constructor(private fb: FormBuilder) { 
-    this.formx = fb.group({
+    this.fg = fb.group({
       "firstName": [null, Validators.compose([Validators.required, Validators.minLength(5)])],
       "lastName": [null, Validators.required],
       "phoneNumber": [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10)])],

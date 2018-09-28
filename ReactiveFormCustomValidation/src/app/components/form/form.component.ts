@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { CheckEricssonEmail } from './../../custom/validators';
+// import { CheckEricssonEmail } from './../../custom/validators';
+import {ValidatorService} from './../../services/validator.service';
 import {DataService} from './../../services/data.service';
 @Component({
   selector: 'form-component',
@@ -9,10 +10,10 @@ import {DataService} from './../../services/data.service';
 })
 export class FormComponent implements OnInit {
   public fg: FormGroup;
-  constructor(private fb: FormBuilder, private ds: DataService) {
+  constructor(private fb: FormBuilder, private ds: DataService, private validator: ValidatorService) {
     this.fg = fb.group({
       'name': [null, Validators.compose([Validators.required, Validators.minLength(5)])],
-      'email': [null, Validators.compose([Validators.required, Validators.email, CheckEricssonEmail])],
+      'email': [null, Validators.compose([Validators.required, Validators.email, this.validator.checkEricssonEmail])],
       'phoneNumber': [null, Validators.compose([Validators.required, Validators.pattern(/^\d+$/),
         Validators.minLength(10), Validators.maxLength(10)])]
     });

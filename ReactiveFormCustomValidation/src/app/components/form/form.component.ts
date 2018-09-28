@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { CheckEricssonEmail } from './../../custom/validators';
 @Component({
   selector: 'form-component',
   templateUrl: './form.component.html',
@@ -10,7 +11,7 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.fg = fb.group({
       'name': [null, Validators.compose([Validators.required, Validators.minLength(5)])],
-      'email': [null, Validators.compose([Validators.required, Validators.email])],
+      'email': [null, Validators.compose([Validators.required, Validators.email, CheckEricssonEmail])],
       'phoneNumber': [null, Validators.compose([Validators.required, Validators.pattern(/^\d+$/),
         Validators.minLength(10), Validators.maxLength(10)])]
     });

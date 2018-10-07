@@ -7,9 +7,9 @@ import { AbstractControl } from '@angular/forms';
 export class ValidatorService {
 
   constructor() { }
-  public checkEricssonEmail(control: AbstractControl) {
+  public checkEricssonEmail(control: AbstractControl) {console.log(control);
     if (control.value && control.value.indexOf('ericsson.com') === -1) {
-      return { error: true };
+      return { messege: 'invalid email' };
     }
     return null;
   }

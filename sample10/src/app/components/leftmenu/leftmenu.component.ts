@@ -10,6 +10,7 @@ export class LeftmenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

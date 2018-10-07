@@ -1,0 +1,5 @@
+<h1>This is parent component</h1>
+<p>The value "{{parentData}}" is lies in parent component</p>
+<p>Whatever you will write inside the input box will be transferred to child component</p>
+<input type="text" [(ngModel)]="mymodel">
+<app-child pdata="{{parentData}}" inputData="{{mymodel}}"></app-child>

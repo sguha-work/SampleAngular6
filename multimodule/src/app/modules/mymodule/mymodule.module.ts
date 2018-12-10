@@ -6,6 +6,9 @@ import { Mycomponent2Component } from './../../components/mymodule/mycomponent2/
   declarations: [
     Mycomponent2Component
   ],
+  exports: [
+    Mycomponent2Component
+  ],
   imports: [
     CommonModule
   ]

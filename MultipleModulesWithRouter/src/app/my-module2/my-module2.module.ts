@@ -4,6 +4,9 @@ import { MyComponent2Component } from './components/my-component2/my-component2.
 
 @NgModule({
   declarations: [MyComponent2Component],
+  exports: [
+    MyComponent2Component
+  ],
   imports: [
     CommonModule
   ]

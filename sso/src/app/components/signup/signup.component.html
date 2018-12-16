@@ -1,0 +1,23 @@
+<h1>
+  Please sign up
+</h1>
+<div>
+  <form>
+    <p>
+      <label>Enter user name</label>
+      &nbsp;<input type="text" name="username" [(ngModel)]="model.userName">
+    </p>
+    <p>
+      <label>Enter password</label>
+      &nbsp;<input type="password" name="password" [(ngModel)]="model.password">
+    </p>
+    <p>
+        <label>Confirm password</label>
+        &nbsp;<input type="password" name="confirmpassword" [(ngModel)]="model.confirmPassword">
+      </p>
+    <p>
+      <button (click)="checkAndSignup()">Click to signup</button>
+    </p>
+  </form>
+  <p>To go to login page click <a routerLink="/login">LOG IN</a></p>
+</div>

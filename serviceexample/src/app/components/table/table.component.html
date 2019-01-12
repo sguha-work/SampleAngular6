@@ -1,0 +1,18 @@
+<h1>This is table component</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>PhoneNumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataServiceObject2.dataArray">
+      <td>{{ data.name }}</td>
+      <td>{{ data.address }}</td>
+      <td>{{ data.phoneNumber }}</td>
+    </tr>
+  </tbody>
+</table>

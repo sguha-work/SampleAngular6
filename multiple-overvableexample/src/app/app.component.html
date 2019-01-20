@@ -1,0 +1,21 @@
+<h1>This is a observable example</h1>
+
+<h3>Following table shows data only after all urls are called</h3>
+<table>
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Id</th>
+            <th>To do title</th>
+            <th>Is completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of model">
+            <td>{{data.userId}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.completed}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+<ul>
+  <li style="cursor: pointer" *ngFor="let menu of menuData" (click)="primaryMenuClicked(menu.heading)">
+    {{ menu.heading }}
+    <ul *ngIf="menu.names">
+      <li *ngFor="let submenu of menu.names" (click)="secondaryMenuClicked(submenu, $event)"> {{ submenu }} </li>
+    </ul>
+  </li>
+</ul>

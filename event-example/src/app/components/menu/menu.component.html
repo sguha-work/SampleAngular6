@@ -1,8 +1,8 @@
-<ul>
-  <li style="cursor: pointer" *ngFor="let menu of menuData" (click)="primaryMenuClicked(menu.heading)">
+<ul class="text-center">
+  <li style="cursor: pointer" *ngFor="let menu of menuData" class="dropdown-toggle" type="button" data-toggle="dropdown">
     {{ menu.heading }}
-    <ul *ngIf="menu.names">
-      <li *ngFor="let submenu of menu.names" (click)="secondaryMenuClicked(submenu, $event)"> {{ submenu }} </li>
+    <ul *ngIf="menu.names" class="dropdown-menu">
+      <li class="submenu" *ngFor="let submenu of menu.names" (click)="secondaryMenuClicked(submenu, $event)"> {{ submenu }} </li>
     </ul>
   </li>
 </ul>

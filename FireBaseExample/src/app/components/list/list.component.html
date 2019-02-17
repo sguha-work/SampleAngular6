@@ -1,0 +1,22 @@
+<p>
+  list works!
+</p>
+<table>
+  <thead>
+    <th>User Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+
+      <td>{{ user.name }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.phoneNumber }}</td>
+      <td>
+          <button >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

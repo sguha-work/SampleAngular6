@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EventService } from './../../services/event.service';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewInit {
   public menuData: Array<Object>;
   constructor(private customEvent: EventService) {
     this.menuData = [
@@ -45,6 +46,10 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    alert($('.submenu').length);
   }
 
 }
